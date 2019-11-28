@@ -25,7 +25,7 @@ SECRET_KEY = '+9%3#x7ol^t3@cp5n^rlzg=2hbw)hgqyh&dkp7kj7z21qm80hb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '<Nemari>.pythonanywhere.com']
+ALLOWED_HOSTS = ['nemari.pythonanywhere.com']
 
 
 # Application definition
@@ -120,3 +120,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+LOGIN_REDIRECT_URL = '/'
