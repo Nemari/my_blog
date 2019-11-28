@@ -25,11 +25,8 @@ SECRET_KEY = '+9%3#x7ol^t3@cp5n^rlzg=2hbw)hgqyh&dkp7kj7z21qm80hb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
+
 ALLOWED_HOSTS = ['127.0.0.1', 'nemari.pythonanywhere.com']
-=======
-ALLOWED_HOSTS = ['nemari.pythonanywhere.com']
->>>>>>> c7798be3cd7dc3ab833b540fa53018324da8f640
 
 
 # Application definition
