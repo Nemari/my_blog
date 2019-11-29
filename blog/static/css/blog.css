@@ -1,12 +1,16 @@
 h1 a { 
 	color: #000;
-	font-family: 'Lobster';
+	font-family: 'Merrywhear';
  }
+
  body {
     padding-left: 15px;
 }
+.login{
+    display: block;
+}
 .page-header {
-    background-color: #ff9400;
+    background-color: #000000;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -22,7 +26,7 @@ h1 a {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Merrywhear', cursive;
 }
 
 .date {
@@ -45,8 +49,7 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    margin-bottom: 70px;
-}
+    margin:0 10% 5% 10%;}
 
 .post h1 a, .post h1 a:visited {
     color: #000000;

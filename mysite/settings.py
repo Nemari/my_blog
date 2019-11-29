@@ -25,7 +25,6 @@ SECRET_KEY = '+9%3#x7ol^t3@cp5n^rlzg=2hbw)hgqyh&dkp7kj7z21qm80hb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ALLOWED_HOSTS = ['127.0.0.1', 'nemari.pythonanywhere.com']
 
 
@@ -122,10 +121,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-<<<<<<< HEAD
-MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-=======
 LOGIN_REDIRECT_URL = '/'
->>>>>>> c7798be3cd7dc3ab833b540fa53018324da8f640
