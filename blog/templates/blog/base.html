@@ -3,27 +3,58 @@
     <head>
         <title>BAKSFYL</title>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <a href="{% url 'login' %}" class="top-menu"><span class="login"></span></a>
-        
+       <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+        <a href="{% url 'login' %}" class="top-menu">log in</a>
+        <script type="text/javascript">
+    var delay_popup = 3000;
+    setTimeout("document.getElementById('bigpopup').style.display='block'", delay_popup);</script>
     </head>
   <body>
+    <div id='wrapper' style=' min-height: 100%;'>
+    <div class='main'>
     <div class="page-header">
+
     {% if user.is_authenticated %}
-        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-        <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+        <a href="{% url 'post_new' %}" class="top-menu" style="color: #1a1a1a;">New</a>
+        <p class="top-menu"style="color: #1a1a1a;">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
     {% else %}
-        <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+        <a href="{% url 'login' %}" class="top-menu"style="color: #1a1a1a;">Lock</a>
     {% endif %}
-    <h1><a href="/">BAKSFYL</a></h1>
+    <nav class="nav">
+            <a class="nav_link" href="http://127.0.0.1:8000/categories/">categories</a>
+            <a class="nav_link" href="#">archieve</a>
+            <a class="logo" href="http://127.0.0.1:8000/">BÂKSFYL</a>
+            <a class="nav_link" href="http://127.0.0.1:8000/about/">about</a>
+            <a class="nav_link" href="http://127.0.0.1:8000/subscribe/">subscribe</a>
+        </nav>
 </div>
-        <div class="row">
+        <div class="content">
             <div class="col-md-8">
             {% block content %}
             {% endblock %}
             </div>
         </div>
     </div>
+            </div>
+            <div id="bigpopup">
+        <div id="popup">
+        <p id="poptit">Stay with me!</p>
+        <form action="#" class="subsform">
+            <a class="close" href="#" title="Close" onclick="document.getElementById('bigpopup').style.display='none'; return false;">X</a>
+            <input type="email" name="email" id="subsem" placeholder="Enter your email...">
+            <button id="send">Send</button>
+        </form>
+    </div>
+</div>
+   <footer class="footer">
+        <a class="footer_logo" href="index.html">BÂKSFYL</a>
+            <div class="footer_social">
+                <a class="link_social" href="https://instagram.com/m.malkin/">Instagram</a>
+                <a class="link_social" href="https://instagram.com/m.malkin/">Telegram</a>
+                <a class="link_social" href="https://instagram.com/m.malkin/">Twitter</a>
+                <a class="link_social" class="link_social" href="https://instagram.com/m.malkin/">Pinterest</a>
+                <a class="link_social" href="https://instagram.com/m.malkin/">Facebook</a>
+            </div>
+    </footer>
+
 </body></html>

@@ -1,60 +1,398 @@
-h1 a { 
-	color: #000;
-	font-family: 'Merrywhear';
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    color: #000;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0 auto;
+}
+
+.logo{
+    font-family: 'Noto Serif', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+    margin: 0;
+    }
+
+#bigpopup{
+background-color: rgba(0, 0, 0, 0.8);
+display: none;
+position: fixed;
+z-index: 99999;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+}
+  
+#popup {
+background: #fff;
+width: 25rem;
+height: 17rem;
+margin: 0 auto;
+margin-top: 12rem;
+padding: 5rem;
+border: none;
+position: relative;
+background-image: url("../img/fashion.jpg");
+
+}
+.subsform{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-left:18rem ;
+
+}
+#poptit{
+    display: flex;
+    justify-content: right;
+    margin: 0 auto;
+    margin-left:18rem ;
+    font-family: "Quicksand", sans-serif
+    font-size:2rem;
+}
+.close{
+display:block;
+position:absolute;
+top:0;
+right:0;
+width:1.5rem;
+height:1.5rem;
+line-height:1.5rem;
+color:#000;
+cursor:pointer;
+text-decoration: none;
+font-family: "Quicksand", sans-serif;
+text-align: center;
+}
+.close:hover {
+background-color:#A9A9A9;
+} 
+#send{
+    display: flex;
+    background: black;
+    color: white;
+    justify-content: center;
+    padding: 1rem 3rem 1rem 3rem;
+    font-family: 'Merriweather', serif;
+    font-size:1.5rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#subsem{
+    display: flex;
+    align-items: center;
+    height: 1.7rem;
+    width: 7rem;
+    margin: .4rem;
+    border-color: #A9A9A9;
+
+}
+
+.header{
+    display: grid;
+    grid-template-areas: "none none nav nav nav nav nav social logout";
+    padding-top: .7rem;
+    padding-left:.7rem;
+    text-align: center;
+    vertical-align: baseline;
+}
+.nav{
+    display: grid;
+    grid-area: nav;
+    grid-template-columns: repeat(5, 1fr); 
+    font-size: 1.5rem;
+          }
+.top-menu, .top-menu:hover, .top-menu:visited {
+    display: grid;
+    grid-area: logout;   
+    color: #1a1a1a;
+    float: right;
+    font-size: 2rem;
+    }
+.nav_link{
+    margin: .7rem;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    position: relative;
+    transition: colour .2s linear;
+}
+.nav_link:after{
+    content: "";
+    display: none;
+    width: 100%;
+    height: 0.4rem;
+    background-color: #000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+.nav_link:hover:after{
+    display: block;
+
+    } 
+
+.social{
+    display: grid;
+    grid-area: social;
+    grid-gap: 0.2rem;
+    grid-template-columns: 1fr,1fr,1fr,1fr;
+    vertical-align: right;
+
+ }
+.inpost{
+    display: flex;
+    justify-content: space-around;
+}
+ .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+     }
+    
+ .post{
+    display: block;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    color:#000;
+    text-decoration: none;
+    align-items: center;
+    box-shadow: .2rem .2rem .2rem #ccc;
+    padding:1rem;
+    border:.02rem solid #A9A9A9;
+    margin: 5rem;
+
+
+ }
+ .footer{
+    display: grid;
+    grid-template-areas: "none nav nav nav nav nav social";
+    text-align: center;
+    justify-content: center;
+    vertical-align: baseline;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #000;
+    margin: 0;
+
+
+ }
+ 
+ .footer_social{
+    display: grid;
+    grid-area: social;
+    grid-template-columns: 1fr,1fr,1fr,1fr;
+    grid-gap: .5rem;
+    text-align: right;
+ }
+ .link_social{
+    font-family: 'Merriweather', serif;
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-right: .2rem;
+ }
+ .footer_logo{
+    font-family: 'Noto Serif', serif;
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: 300;
+    text-decoration: none;
+
+ }
+ .latest{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+
+
+
+ }
+ .latest_post{
+    display: flex;
+    font-family: 'Noto Serif', serif;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: none;
+    box-shadow: .2rem .2rem .2rem #ccc;
+    border:.02rem solid #A9A9A9;
+    margin: .5rem;
+
+
+ }
+ /*categories*/
+ .categories{
+    font-family: 'Noto Serif', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+    
  }
 
- body {
-    padding-left: 15px;
-}
-.login{
-    display: block;
-}
-.page-header {
-    background-color: #000000;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
-}
-
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
+ .cat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    padding-top:2rem;
+    box-shadow:  0 -.3rem 0 black;
     text-decoration: none;
+    text-align: center;
+    color: #000;
+    margin: 0;
+ }
+ /*about*/
+ .about{
+    display: block;
+    margin-top: 2rem;
+    font-family: 'Noto Serif', serif;
+    font-size: 1rem;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+ }
+.img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+}
+ #head{
+    font-family: 'Noto Serif', serif;
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    text-align: center;
+    margin: 3rem;
+
+ }
+ .info{
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-bottom: 7rem;
+ }
+ /*subscribe*/
+.form_cont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    margin:0 auto;
+    width: 10rem;
+    padding: 13rem;
+    box-shadow: 0 1rem .7rem #ccc;
+    background-image:url("../images/back.jpg");
+    
+    
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+
+}
+p{margin:0 auto;}
+
+.title_{
+    display: flex;
+    font-family: 'Noto Serif', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    justify-content: center;
+    margin: 7% 20% 70% 40%;
+    position: absolute;
+}
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 1rem 3rem 1rem 3rem;
+    font-family: 'Merriweather', serif;
+    font-size:1.5rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#name{
+    display: flex;
+    align-items: center;
+    height: 1.7rem;
+    width: 12rem;
+    margin: .4rem;
+    border: none;
+
+}
+#pswrd{
+    margin: .4rem;
+    display: flex;
+    align-items: center;
+    height: 1.7rem;
+    width: 12rem;
+    border: none;
+}
+#email{
+    margin: .4rem;
+    display: flex;
+    align-items: center;
+    height: 1.7rem;
+    width: 12rem;
+    border: none;
+
+}
+.sbody{
+    /*background: #ccc;*/
+    
+}
+.logosubmit{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-size:18.4rem;
+    color: #1a1a1a;
+    z-index: -1;
+    text-decoration: none;
+    position: absolute;
+    margin: 0;
+    padding:30rem 0 10rem 0;
 }
 
-.content {
-    margin-left: 40px;
+#wrapper {
+  min-height: 100%;
 }
-
-h1, h2, h3, h4 {
-    font-family: 'Merrywhear', cursive;
+.main {
+  padding-bottom: 100px;
+  /*Высота футера*/
 }
-
-.date {
-    color: #828282;
-}
-
-.save {
-    float: right;
-}
-
-.post-form textarea, .post-form input {
-    width: 100%;
-}
-
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
-}
-
-.post {
-    margin:0 10% 5% 10%;}
-
-.post h1 a, .post h1 a:visited {
-    color: #000000;
-}
-
-.comment {
-    margin: 20px 0px 20px 20px;
+footer {
+  margin-top: -100px;
+  /*Минус Высота футера*/
+  height: 100px;
+  /*Высота футера*/
 }

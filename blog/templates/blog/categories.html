@@ -1,0 +1,57 @@
+{% load static %}
+<!doctype html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,700,900i&display=swap" rel="stylesheet">
+		<title>BAKSFYL</title>
+		
+</head>
+<body>
+	<header class= "header">		
+		<nav class="nav">
+			   <a class="nav_link" href="http://127.0.0.1:8000/categories/">categories</a>
+            <a class="nav_link" href="#">archieve</a>
+            <a class="logo" href="http://127.0.0.1:8000/">BÂKSFYL</a>
+            <a class="nav_link" href="http://127.0.0.1:8000/about/">about</a>
+            <a class="nav_link" href="http://127.0.0.1:8000/subscribe/">subscribe</a>
+		</nav>
+		<!-- media urls -->
+		<div class="social">
+			<a href="https://instagram.com/m.malkin/"><img src="{% static 'img/insta.jpg' %}" 
+  			width="25px" height="25px" alt="instagram"></a>
+  			<a href="https://instagram.com/m.malkin/"><img src="{% static 'img/telegr.png' %}" 
+  			width="25px" height="25px" alt="telegram"></a>
+  			<a href="https://instagram.com/m.malkin/"><img src="{% static 'img/twi.png' %}" 
+  			width="25px" height="25px" alt="twitter"></a>
+  			<a href="https://instagram.com/m.malkin/"><img src="{% static 'img/pin.png' %}" 
+  			width="25px" height="25px" alt="pinterest"></a>
+  			<a href="https://instagram.com/m.malkin/"><img src="{% static 'img/fb.png' %}" 
+  			width="25px" height="25px" alt="pinterest"></a>
+		</div>
+	</header>
+
+
+	<div class="categories">
+		<a class="cat" href=""><div><img src="{% static 'img/life.PNG' %}" alt="life"><p>l i f e</p></div></a>
+		<a class="cat" href=""><div><img src="{% static 'img/fashion.PNG' %}" alt="fashion"><p>f a s h i o n</p></div></a>
+		<a class="cat" href=""><div><img src="{% static 'img/beauty.PNG' %}" alt="beauty"><p>b e a u t y</p></div></a>
+		<a class="cat" href="news.html"><div><img src="{% static 'img/news.PNG' %}" alt="news"><p>n e w s</p></div></a>
+
+	<footer class="footer">
+		<a class="footer_logo" href="index.html">BÂKSFYL</a>
+			<div class="footer_social">
+					<a class="link_social" href="https://instagram.com/m.malkin/">Instagram</a>
+  					<a class="link_social" href="https://instagram.com/m.malkin/">Telegram</a>
+  					<a class="link_social" href="https://instagram.com/m.malkin/">Twitter</a>
+  					<a class="link_social" class="link_social" href="https://instagram.com/m.malkin/">Pinterest</a>
+  					<a class="link_social" href="https://instagram.com/m.malkin/">Facebook</a>
+
+				</div>
+	</footer>
+
+
+</body>
+</html>

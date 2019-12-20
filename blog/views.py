@@ -5,7 +5,14 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from .forms import PostForm, CommentForm
 from .models import Post, Comment
+from rest_framework import viewsets
+from .serializers import CommentSerializer
+from rest_framework import generics
 
+
+class api(generics.ListCreateAPIView):
+    queryset = Comment.objects.all().order_by('-created_date')
+    serializer_class = CommentSerializer 
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
@@ -84,4 +91,14 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
+
+def about(request):
+    return render(request, 'blog/about.html')
+
+def categories(request):
+    return render(request, 'blog/categories.html')
+
+def subscribe(request):
+    return render(request, 'blog/subbscribe.html')
+
 

@@ -2,13 +2,17 @@
 
 {% block content %}	
 	{% for post in posts %}
-	    <div class="post">
+	    <div class="post"style=" margin: 5rem;">
 	        <div class="date">
 	            {{ post.published_date }}
 	        </div>
-	        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+	        <div class="inpost" style="display: flex;
+    justify-content: space-around;">
+	        <img style="margin: 1rem;" src="{{post.image}}" height="400px" weigh="100%"/>
+	        <div><h1><a href="{% url 'post_detail' pk=post.pk %}"style="color: #1a1a1a;">{{ post.title }}</a></h1>
 	        <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
-	        <p>{{ post.text|linebreaksbr }}</p>
+	        <p>{{ post.text|linebreaksbr }}</p></div>
+	    </div>
 	    </div>
 	    {% endfor %}
 {% endblock %}
